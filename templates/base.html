@@ -1,0 +1,263 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- Eventry - Conference & Event Landing Page Template design by DSAThemes (http://www.dsathemes.com) -->
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content="DSAThemes">	
+		<meta name="description" content="Eventry - Conference & Event Landing Page Template"/>
+		<meta name="keywords" content="Responsive, HTML5 template, DSAThemes, Conference, One Page, Landing, Event, Meeting">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				
+		<!-- SITE TITLE -->
+		<title>CIPCHV</title>
+							
+		<!-- FAVICON AND TOUCH ICONS  -->
+		<link rel="shortcut icon" href="https://www.unam.mx/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />		
+		<!-- BOOTSTRAP CSS -->
+		<link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+				
+		<!-- FONT ICONS -->
+		<link href="{%static 'css/font-awesome.min.css'%}" rel="stylesheet">	
+				
+		<!-- GOOGLE FONTS -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300' rel='stylesheet' type='text/css'>
+				
+		<!-- PLUGINS STYLESHEET -->
+		<link href="{%static 'css/owl.carousel.css' %}" rel="stylesheet">
+		<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+		<link href="{% static 'css/flexslider.css' %}" rel="stylesheet">
+				
+		<!-- TEMPLATE CSS -->
+		<link href="{%static 'css/style.css' %}" rel="stylesheet"> 	
+		
+		<!-- Custom Colors -->
+		<!-- <link href="css/brown.css" rel="stylesheet"> -->	 
+		<link href="{% static 'css/dark-blue.css'%}" rel="stylesheet">	 
+		<!-- <link href="css/green.css" rel="stylesheet"> -->	 	
+		<!-- <link href="css/lightgreen.css" rel="stylesheet"> -->
+		<!-- <link href="css/orange.css" rel="stylesheet"> -->	 
+		<!-- <link href="css/purple.css" rel="stylesheet"> -->	 
+		<!-- <link href="css/red.css" rel="stylesheet"> -->	 	
+		<!-- <link href="css/sky-blue.css" rel="stylesheet"> -->
+		<!-- <link href="css/yellow.css" rel="stylesheet"> -->	
+
+		<!-- RESPONSIVE CSS -->
+		<link href="{% static 'css/responsive.css'%}" rel="stylesheet"> 
+
+			
+	</head>
+
+
+	<body>
+	
+	
+	<link rel="shortcut icon" href="https://www.unam.mx/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+		<!-- PRELOADER
+		============================================= -->		
+		<div class="animationload">
+			<div class="loader"></div>
+		</div>
+		
+		
+		
+		<!-- PAGE CONTENT
+		============================================= -->	
+		<div id="page" class="page-wrapper">
+		
+		
+		
+			<!-- HEADER 
+			============================================= -->
+			<header id="header" class="header">		
+				<div class="navbar navbar-fixed-top">	
+					<div class="container">
+					
+						
+						<!-- Navigation Bar -->
+						<div class="navbar-header">
+						
+							<!-- Responsive Menu Button -->
+							<button type="button" id="nav-toggle" class="navbar-toggle text-right" data-toggle="collapse" data-target="#navigation-menu">
+								<span class="sr-only">Toggle navigation</span> 
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+							<!-- LOGO IMAGE -->
+							<!-- Recommended sizes 150x34px; -->
+							<a class="navbar-brand logo-white" href="#intro-3"><img src="{%static 'images/banner_ph.png' %}" alt="logo"></a>
+							<a class="navbar-brand logo-black" href="#intro-3"><img src="{%static 'images/banner_ph.png'%}" alt="logo"></a>
+							
+						</div>	<!-- End Navigation Bar -->
+						
+						
+						<!-- Navigation Menu -->
+						<nav id="navigation-menu" class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-right">													
+																														
+								<li><a href="#about">Acerca de</a></li>								
+								<li><a href="#schedule">Programa</a></li>								
+								<li><a href="#speakers">Ponentes</a></li>
+					
+																						
+								<li><a href="#contacts">Sede</a></li>
+								<li><a class="register-btn" href="{% url 'landing:registro_ponente' %}">Regitrate como ponente</a></li>
+								<li><a class="register-btn" href="{% url 'landing:registro_asistente' %}">Regitrate como asistente</a></li>								
+
+							</ul>
+						</nav>  <!-- End Navigation Menu -->
+						
+						
+					</div>	  <!-- End container -->
+				</div>	   <!-- End navbar fixed top  -->
+			</header>	<!-- END HEADER -->	
+			
+			
+			{% block content %}
+			{% endblock %}
+				
+			
+			
+			
+			<!-- JOIN OUR COMMUNITY
+			============================================= -->
+			<section id="join-us" class="p-top-80 p-bottom-80 division">
+				<div class="container">
+					<div class="row">					
+						<div class="col-md-12 text-center">
+						
+						
+							<!-- Title -->
+							<h3 class="h3-thin">Unete a nuestra comunidad</h3>
+							<p class="p-lg">Siéntase libre de comunicarse con nosotros a través de nuestras redes sociales</p>
+							
+							<!-- Social Links -->
+							<div id="footer-socials">
+						
+								<ul class="footer-icons clearfix">
+									<li><a class="foo-social ico-facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										
+									
+									<li><a class="foo-social ico-youtube" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							
+								<!--	
+									<li><a class="foo-social ico-behance" href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>																
+									<li><a class="foo-social ico-skype" href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-vk" href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>								
+									<li><a class="foo-social ico-digg" href="#"><i class="fa fa-digg" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-deviantart" href="#"><i class="fa fa-deviantart" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-envelope" href="#"><i class="fa fa-envelope-square" aria-hidden="true"></i></a></li>							
+									<li><a class="foo-social ico-delicious" href="#"><i class="fa fa-delicious" aria-hidden="true"></i></a></li>								
+									<li><a class="foo-social ico-dribbble" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-pinterest" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>	
+									<li><a class="foo-social ico-dropbox" href="#"><i class="fa fa-dropbox" aria-hidden="true"></i></a></li>									
+									<li><a class="foo-social ico-tumblr" href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-vimeo" href="#"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-flickr" href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-github" href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-renren" href="#"><i class="fa fa-renren" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-xing" href="#"><i class="fa fa-xing" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-weibo" href="#"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
+									<li><a class="foo-social ico-rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>									
+								-->		
+								</ul>
+							
+							</div>
+							
+										
+						</div>
+					</div>	 <!-- End row -->
+				</div>	  <!-- End container -->
+			</section>	<!-- END JOIN OUR COMMUNITY -->	
+
+
+
+			<!-- FOOTER
+			============================================= -->
+			<footer id="footer" class="bg-dark p-top-40 p-bottom-40 footer division">
+				<div class="container">
+					<div class="row">					
+						<div id="footer-copyright" class="col-md-12 text-center">
+						
+
+							<!-- FOOTER COPYRIGHT -->
+							<p>Hecho en México, Universidad Nacional Autónoma de México (UNAM), todos los derechos reservados 2017.</p>	
+							<!--p>Landing Page Template Designed & Developed By: <a href="#">DSAThemes</a></p-->
+							
+								
+						</div>
+					</div>	
+				</div>	   <!-- End container -->
+			</footer>	<!-- END FOOTER -->	
+
+			
+			
+		</div>	<!-- END PAGE CONTENT -->
+		
+	
+	
+		<!-- EXTERNAL SCRIPTS
+		============================================= -->	
+		<script src="{% static 'js/jquery-2.2.4.min.js'%}" type="text/javascript"></script>
+		<script src="{% static 'js/bootstrap.min.js'%}" type="text/javascript"></script>	
+		<script src="{% static 'js/modernizr.custom.js'%}" type="text/javascript"></script>
+		<script src="{% static 'js/jquery.easing.js'%}" type="text/javascript"></script>
+		<script src="{% static 'js/retina.js'%}" type="text/javascript"></script>	
+		<script src="{% static 'js/jquery.stellar.min.js'%}" type="text/javascript"></script>	
+		<script src="{% static 'js/jquery.scrollto.js'%}"></script>
+		<script src="{% static 'js/jquery.countdown.min.js'%}"></script>	
+		<script src="{% static 'js/owl.carousel.js'%}" type="text/javascript"></script>
+		<script defer src="{% static 'js/jquery.appear.js'%}"></script>
+		<script defer src="{% static 'js/jquery.vide.min.js'%}"></script>
+		<script src="{% static 'js/jquery.mixitup.js'%}" type="text/javascript"></script>
+		<script src="{% static 'js/jquery.magnific-popup.min.js'%}" type="text/javascript"></script>
+		<script defer src="{% static 'js/jquery.flexslider.js'%}" type="text/javascript"></script>
+		<script src="{% static 'js/waypoints.min.js'%}" type="text/javascript"></script>	
+		<script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+		<script src="{% static 'js/register_form.js'%}" type="text/javascript"></script>
+		<script src="{% static 'js/comment_form.js'%}" type="text/javascript"></script>	
+		<script defer src="{% static 'js/jquery.validate.min.js'%}" type="text/javascript"></script>
+		
+		<!-- Custom Script -->		
+		<script src="{% static 'js/custom.js'%}" type="text/javascript"></script>	
+						
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+						
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->	
+		
+		<!--
+		<script>
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-XXXXX-X']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		-->
+		
+	{%block extrajs%}
+	{%endblock%}	
+	</body>
+	
+	
+</html>

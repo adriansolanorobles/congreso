@@ -1,0 +1,76 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{%block content%}
+<section id="registro" class="wide-50 registro-section division">
+				<div class="container">	
+				
+				
+					<!-- SECTION TITLE -->				
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 section-title">
+						
+							<!-- Title -->
+							<h3>Registro como asistente</h3>	
+								
+														
+						</div>
+					</div>
+
+					<form action="">
+					<div class="row">
+						
+ 						<div class="col-sm-6">
+ 							<div class="form-group">
+								<label for="email">Email address:</label>
+								<input type="email" class="form-control" id="email">
+							</div>
+ 						</div>
+ 						<div class="col-sm-6">
+ 							<div class="form-group">
+								<label for="pwd">Password:</label>
+								<input type="password" class="form-control" id="pwd">
+							</div>
+ 						</div>					
+						
+							
+							
+  
+  						
+						
+					</div>	 <!-- End row -->
+					<div class="row">
+						<div class="col-sm-6">
+							<button type="submit" class="btn btn-lg">Submit</button>
+						</div>
+						<div class="col-sm-6"></div>
+					</div>	
+					</form>
+					
+					<!-- PRICING NOTICE MESSAGE -->	
+					<div class="row">
+						<div class="col-md-12 text-center pricing-notice m-bottom-50">
+							<p>¿Necesitas información adicional sobre el congreso? <a href="mailto:support@example.com">Contactanos</a> </p>
+						</div>
+					</div>	 <!-- End row -->	
+					
+					
+				</div>    <!-- End container -->		
+			</section>	<!-- END PRICING -->
+{%endblock%}
+
+{%block extrajs%}
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+	$(".header .navbar.navbar-fixed-top").addClass("scroll");
+
+	});
+	
+</script>
+
+
+
+{%endblock%}

@@ -1,0 +1,66 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{%block content%}
+
+<!-- INTRO-3
+			============================================= -->
+			<section id="intro-3" class="intro-section">
+				<div class="overlay division">
+					<div class="container">		
+						<div id="intro-3-content" class="row">
+							
+							
+							<!-- INTRO TEXT -->
+							<div class="col-md-12 col-lg-10 col-lg-offset-1 intro-txt text-center white-color">
+								
+								
+								<!-- Title -->
+								<h4>Mayo 28-30, CDMX, México</h4>
+								<h2>1er. Congreso Internacional de Psicología Contemplativa y Habilidades para la Vida  </h2> 
+								
+								
+								<!-- COUNTDOWN ELEMENT 	-->
+								<div class="m-top-40">
+									<p>El Congreso inicia en:</p>
+									<div id="clock"></div>
+								</div>	
+							</div>
+
+																
+						</div>	 <!-- End Intro Content -->
+					</div>    <!-- End container -->
+				</div>	   <!-- End overlay -->
+			</section>	<!-- END INTRO-3 -->
+	
+{%endblock%}
+{%block extrajs%}
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$(window).on('scroll', function() {
+		
+		"use strict";
+		
+				
+		/*----------------------------------------------------*/
+		/*	Navigtion Menu Scroll
+		/*----------------------------------------------------*/	
+		
+		var b = $(window).scrollTop();
+		
+		if( b > 60 ){		
+			$(".header .navbar.navbar-fixed-top").addClass("scroll");
+		} else {
+			$(".header .navbar.navbar-fixed-top").removeClass("scroll");
+		}
+
+				
+	});
+
+});
+	
+
+</script>
+{%endblock%}
