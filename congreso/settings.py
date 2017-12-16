@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'congreso.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -84,6 +84,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
 """
 DATABASES = {
     'default': {
@@ -96,7 +97,7 @@ DATABASES = {
     }
 }
 
-
+"""
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
