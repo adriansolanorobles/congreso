@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
+import datetime
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'congreso.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'congreso.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -81,6 +81,17 @@ DATABASES = {
         'USER': 'seldor492_cong',
         'PASSWORD': 'pass1234$',
         'HOST': '1.pgsqlserver.com',
+        'PORT': '5432',
+    }
+}
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DBNAME',''),
+        'USER': os.getenv('DBUSER',''),
+        'PASSWORD': os.getenv('DBPASSWORD',''),
+        'HOST': os.getenv('DBHOST',''),
         'PORT': '5432',
     }
 }
@@ -131,4 +142,10 @@ STATICFILES_DIRS = [os.path.join(os.getcwd(),'static') ]
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(os.getcwd(),'media')
+
+try:
+    from .local_settings import *
+
+except:
+    pass
 
