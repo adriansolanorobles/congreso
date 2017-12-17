@@ -94,8 +94,12 @@
 							
 							<!-- LOGO IMAGE -->
 							<!-- Recommended sizes 150x34px; -->
-							<a class="navbar-brand logo-white" href="#intro-3"><img src="{%static 'images/banner_ph_white.png' %}" alt="logo"></a>
-							<a class="navbar-brand logo-black" href="#intro-3"><img src="{%static 'images/banner_ph.png'%}" alt="logo"></a>
+							<a class="navbar-brand logo-white" href="#intro-3"><img src="{%static 'images/banner_ph_white.png' %}" alt="logo">
+								
+							</a>
+							<a class="navbar-brand logo-black" href="#intro-3"><img src="{%static 'images/banner_ph.png'%}" alt="logo">
+
+							</a>
 							
 						</div>	<!-- End Navigation Bar -->
 						
@@ -104,14 +108,14 @@
 						<nav id="navigation-menu" class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-right">													
 																														
-								<li><a href="#about">Acerca de</a></li>								
+								<li><a href="{% url 'landing:acerca_de'%}">Acerca de</a></li>								
 								<li><a href="#schedule">Programa</a></li>								
 								<li><a href="#speakers">Ponentes</a></li>
 					
 																						
 								<li><a href="#contacts">Sede</a></li>
 								<li><a class="register-btn" href="">Regitrate como ponente</a></li>
-								<li><a class="register-btn" href="">Regitrate como asistente</a></li>								
+								<li><a class="register-btn" href="{% url 'landing:asistentes_new'%}">Regitrate como asistente</a></li>								
 
 							</ul>
 						</nav>  <!-- End Navigation Menu -->

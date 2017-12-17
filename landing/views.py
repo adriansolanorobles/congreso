@@ -4,6 +4,8 @@ from .forms import AsistenteForm
 def index(request):
 	return render(request, 'landing/index.html')	
 
+def acerca_de(request):
+	return render(request, 'landing/acerca_de.html')
 """
 def ponentes_new(request):
 	form = PonenteForm(request.POST or None)
