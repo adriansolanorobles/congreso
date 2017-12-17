@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django import forms
-from .models import asistentes, ponentes
+from .models import asistentes
 
 class AsistenteForm( forms.ModelForm ):
 	class Meta:
@@ -18,17 +18,3 @@ class AsistenteForm( forms.ModelForm ):
 
 		}
 
-class PonenteForm(forms.ModelForm):
-	id_padre = forms.ModelChoiceField(queryset=cat_cuentas.objects.all(), required=False, empty_label='', widget=forms.Select(attrs={'class':'form-control js-select2'}))
-	
-	class Meta:
-		model = cat_cuentas
-		fields = ['clave','descripcion', 'porcentaje', 'corrida', 'id_padre' ]
-		widgets = {
-			'clave': forms.TextInput(attrs= {'placeholder':'Clave','class':'form-control'}),
-			'descripcion': forms.TextInput(attrs= {'placeholder':'Descripción','class':'form-control'}),
-			'porcentaje': forms.TextInput(attrs= {'placeholder':'Porcentaje','class':'form-control'}),
-			'corrida': forms.CheckboxInput(attrs= {'class':'custom-control-input'}),
-			
-
-		}
