@@ -46,7 +46,7 @@ class ponentes(models.Model):
     a3_nombre = models.CharField(max_length=255)
     a3_apellido_paterno = models.CharField(max_length=255)
     a3_apellido_materno = models.CharField(max_length=255)
-    documentos = models.FileField(upload_to=content_file_name, null=True,blank=True)
+    documento = models.FileField(upload_to=content_file_name, null=True,blank=True)
 
     class Meta:
         ordering = ('titulo',)

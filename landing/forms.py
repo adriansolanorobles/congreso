@@ -19,7 +19,7 @@ class AsistentesForm( forms.ModelForm ):
 		}
 
 
-"""class PonentesForm( forms.ModelForm ):
+class PonentesForm( forms.ModelForm ):
 	class Meta:
 		model = ponentes
 		fields = ['titulo','a1_nombre', 'a1_apellido_paterno', 'a1_apellido_materno', 'a1_correo_electronico', 'a1_telefono', 'a1_institucion_de_procedencia', 'a2_nombre', 'a2_apellido_paterno', 'a2_apellido_materno', 'a3_nombre', 'a3_apellido_paterno', 'a3_apellido_materno', 'documento']
@@ -40,4 +40,3 @@ class AsistentesForm( forms.ModelForm ):
 			'documento' : forms.ClearableFileInput( attrs = {'class':'form-control', 'placeholder':'Documento'} ),
 
 		}
-		"""

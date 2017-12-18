@@ -18,7 +18,8 @@
 						</div>
 					</div>
 
-					<form action="">
+					<form action="{%url 'landing:asistentes_create'%}" method="POST">
+						{% csrf_token %}
 					<div class="row">
 						
  						<div class="col-sm-6">
