@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{%block content%}
+<section id="invitacion" class="wide-50 invitacion-section division">
+				<div class="container">	
+				
+				<p class="text-center">
+					<img src="{% static 'images/cartel.jpg' %}">
+				</p>	
+				</div>    <!-- End container -->		
+			</section>	<!-- END PRICING -->
+{%endblock%}
+
+{%block extrajs%}
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+	$(".header .navbar.navbar-fixed-top").addClass("scroll");
+
+	});
+	
+</script>
+
+
+
+{%endblock%}

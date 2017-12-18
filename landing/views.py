@@ -6,6 +6,11 @@ from .forms import AsistentesForm
 def index(request):
 	return render(request, 'landing/index.html')	
 
+def invitacion(request):
+	return render(request, 'landing/invitacion.html')	
+
+def programa(request):
+	return render(request, 'landing/programa.html')
 def convocatoria(request):
 	return render(request, 'landing/convocatoria.html')
 """
