@@ -1,0 +1,106 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{%block content%}
+<section id="registro" class="wide-50 registro-section division">
+				<div class="container">	
+				
+				
+					<!-- SECTION TITLE -->				
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 section-title">
+						
+							<!-- Title -->
+							<h3>Registro como ponente</h3>	
+								
+														
+						</div>
+					</div>
+
+					<form action="">
+					<div class="row">
+						<fieldset>
+							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Título de la ponencia:</label>
+									{{form.titulo}}
+								</div>
+ 							</div>	
+						</fieldset>
+ 						
+ 						<div class="col-sm-6">
+ 							<div class="form-group">
+								<label for="pwd">Apellido  paterno:</label>
+								{{form.apellido_paterno}}
+							</div>
+ 						</div>					
+						
+						<div class="col-sm-6">
+ 							<div class="form-group">
+								<label for="email">Apellido materno:</label>
+								{{form.apellido_materno}}
+							</div>
+ 						</div>
+ 						<div class="col-sm-6">
+ 							<div class="form-group">
+								<label for="pwd">Correo electrónico:</label>
+								{{form.correo_electronico}}
+							</div>
+ 						</div>
+						<div class="col-sm-6">
+ 							<div class="form-group">
+								<label for="pwd">Teléfono:</label>
+								{{form.telefono}}
+							</div>
+ 						</div>	
+						<div class="col-sm-6">
+ 							<div class="form-group">
+								<label for="pwd">Instutución de procedencia:</label>
+								{{form.institucion_de_procedencia}}
+							</div>
+ 						</div>	
+ 						<div class="col-sm-6">
+ 							<div class="form-group">
+								<label for="pwd">Talleres disponibles:</label>
+								{{form.talleres_disponibles}}
+							</div>
+ 						</div>
+  
+  						
+						
+					</div>	 <!-- End row -->
+					<div class="row">
+						<div class="col-sm-6">
+							<button type="submit" class="btn btn-lg">Guardar</button>
+						</div>
+						<div class="col-sm-6"></div>
+					</div>	
+					</form>
+					
+					<!-- PRICING NOTICE MESSAGE -->	
+					<div class="row">
+						<div class="col-md-12 text-center pricing-notice m-bottom-50">
+							<p>¿Necesitas información adicional sobre el congreso? <a href="mailto:support@example.com">Contactanos</a> </p>
+						</div>
+					</div>	 <!-- End row -->	
+					
+					
+				</div>    <!-- End container -->		
+			</section>	<!-- END PRICING -->
+{%endblock%}
+
+{%block extrajs%}
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+	$(".header .navbar.navbar-fixed-top").addClass("scroll");
+
+	});
+	
+</script>
+
+
+
+{%endblock%}

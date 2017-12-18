@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
+import os
+import time
 # Create your models here.
 
 TALLERES = {
@@ -24,9 +26,34 @@ class asistentes(models.Model):
     def __str__(self):
         return '{0} {1}'.format(self.nombre,self.apellido_paterno)
 
-#class ponentes(models.Model):
-    
 
+def content_file_name(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = "%s_%s.%s" % (instance.titulo, str(int(round(time.time()*1000))), ext)
+    return os.path.join('archivos/', filename)
+
+class ponentes(models.Model):
+    titulo = models.CharField(max_length=255)   
+    a1_nombre = models.CharField(max_length=255)
+    a1_apellido_paterno = models.CharField(max_length=255)
+    a1_apellido_materno = models.CharField(max_length=255)
+    a1_correo_electronico = models.EmailField()
+    a1_telefono = models.CharField(max_length=255)
+    a1_institucion_de_procedencia = models.CharField(max_length=255) 
+    a2_nombre = models.CharField(max_length=255)
+    a2_apellido_paterno = models.CharField(max_length=255)
+    a2_apellido_materno = models.CharField(max_length=255)
+    a3_nombre = models.CharField(max_length=255)
+    a3_apellido_paterno = models.CharField(max_length=255)
+    a3_apellido_materno = models.CharField(max_length=255)
+    documentos = models.FileField(upload_to=content_file_name, null=True,blank=True)
+
+    class Meta:
+        ordering = ('titulo',)
+        verbose_name= 'Ponentes'
+
+    def __str__(self):
+        return '{0} {1}'.format(self.nombre,self.apellido_paterno)    
 
 #****************************Usuario****************************************************
 class UserManager(BaseUserManager, models.Manager):
