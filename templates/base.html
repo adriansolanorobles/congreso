@@ -94,10 +94,10 @@
 							
 							<!-- LOGO IMAGE -->
 							<!-- Recommended sizes 150x34px; -->
-							<a class="navbar-brand logo-white" href="#intro-3"><img src="{%static 'images/banner_ph_white.png' %}" alt="logo">
+							<a class="navbar-brand logo-white" href="{% url 'landing:index'%}"><img src="{%static 'images/banner_ph_white.png' %}" alt="logo">
 								
 							</a>
-							<a class="navbar-brand logo-black" href="#intro-3"><img src="{%static 'images/banner_ph.png'%}" alt="logo">
+							<a class="navbar-brand logo-black" href="{% url 'landing:index'%}"><img src="{%static 'images/banner_ph.png'%}" alt="logo">
 
 							</a>
 							
@@ -113,9 +113,9 @@
 								<li><a href="{% url 'landing:invitacion'%}">Invitación</a></li>
 					
 																						
-								<li><a href="">Sede</a></li>
-								<li><a class="register-btn" href="">Registrate como ponente</a></li>
-								<li><a class="register-btn" href="{% url 'landing:asistentes_new'%}">Registrate como asistente</a></li>								
+								<li><a href="">Comite organizador</a></li>
+								
+								<li><a class="register-btn" href="{% url 'landing:registro'%}">Registrate ahora</a></li>								
 
 							</ul>
 						</nav>  <!-- End Navigation Menu -->

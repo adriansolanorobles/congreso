@@ -4,7 +4,10 @@ from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from .forms import AsistentesForm
 # Create your views here.
 def index(request):
-	return render(request, 'landing/index.html')	
+	return render(request, 'landing/index.html')
+
+def registro(request):
+	return render(request, 'landing/registro.html')	
 
 def invitacion(request):
 	return render(request, 'landing/invitacion.html')	
