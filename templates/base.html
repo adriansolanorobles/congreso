@@ -52,6 +52,9 @@
 		<!-- RESPONSIVE CSS -->
 		<link href="{% static 'css/responsive.css'%}" rel="stylesheet"> 
 
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+		
+
 			
 	</head>
 
@@ -113,7 +116,7 @@
 								<li><a href="{% url 'landing:invitacion'%}">Invitación</a></li>
 					
 																						
-								<li><a href="">Comite organizador</a></li>
+								<li><a href="{% url 'landing:comite_organizador'%}">Comite organizador</a></li>
 								
 								<li><a class="register-btn" href="{% url 'landing:registro'%}">Registrate ahora</a></li>								
 
@@ -210,7 +213,7 @@
 		
 		<!-- Custom Script -->		
 		<script src="{% static 'js/custom.js'%}" type="text/javascript"></script>	
-						
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>		
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>

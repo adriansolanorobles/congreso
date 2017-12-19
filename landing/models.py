@@ -44,11 +44,12 @@ class asistentes(models.Model):
 
 def content_file_name(instance, filename):
     ext = filename.split('.')[-1]
-    filename = "%s_%s.%s" % (instance.titulo, str(int(round(time.time()*1000))), ext)
+    filename = "%s_%s_%s.%s" % (instance.a1_nombre, instance.a1_apellido_paterno, str(int(round(time.time()*1000))), ext)
     return os.path.join('archivos/', filename)
 
 class ponentes(models.Model):
-    lineas_tematicas = models.IntegerField(choices=LINEAS_TEMATICAS, blank=True, null=True)
+    olio = models.CharField(max_length=255, blank=True, null=True)
+    lineas_tematicas = models.IntegerField(choices=LINEAS_TEMATICAS)
     titulo = models.CharField(max_length=255)   
     a1_nombre = models.CharField(max_length=255)
     a1_apellido_paterno = models.CharField(max_length=255)
@@ -62,7 +63,7 @@ class ponentes(models.Model):
     a3_nombre = models.CharField(max_length=255)
     a3_apellido_paterno = models.CharField(max_length=255)
     a3_apellido_materno = models.CharField(max_length=255)
-    documento = models.FileField(upload_to=content_file_name, null=True,blank=True)
+    documento = models.FileField(upload_to=content_file_name)
 
     class Meta:
         ordering = ('titulo',)

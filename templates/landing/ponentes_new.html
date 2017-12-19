@@ -103,7 +103,8 @@
 						</div>
 					</div>
 
-					<form action="">
+					<form action="{% url 'landing:ponentes_create' %}" enctype="multipart/form-data" method="POST">
+						{% csrf_token %}
 					<div class="row">
 
 						<fieldset>
@@ -207,7 +208,16 @@
 								</div>
  							</div>
  						</fieldset>
-  
+						<fieldset>
+ 							  <legend>Documentos</legend>
+ 							 <div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Archivo:</label>
+									{{form.documento}}
+								</div>
+ 							</div>
+ 							
+ 						</fieldset>
   						
 						
 					</div>	 <!-- End row -->

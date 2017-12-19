@@ -11,7 +11,7 @@ class AsistentesForm( forms.ModelForm ):
 			'nombre' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Nombre'} ),
 			'apellido_paterno' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Apellido materno'} ),
 			'apellido_materno' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Apellido paterno'} ),
-			'correo_electronico' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Correo electrónico'} ),
+			'correo_electronico' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Correo electrónico','type': 'email'} ),
 			'telefono' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Telefono'} ),
 			'institucion_de_procedencia' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Institución de Procedencia'} ),
 			'talleres_disponibles' : forms.Select( attrs = {'class':'form-control',} ),
@@ -29,7 +29,7 @@ class PonentesForm( forms.ModelForm ):
 			'a1_nombre' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Nombre'} ),
 			'a1_apellido_paterno' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Apellido materno'} ),
 			'a1_apellido_materno' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Apellido paterno'} ),
-			'a1_correo_electronico' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Correo electrónico'} ),
+			'a1_correo_electronico' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Correo electrónico','type': 'email'} ),
 			'a1_telefono' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Telefono'} ),
 			'a1_institucion_de_procedencia' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Institución de Procedencia'} ),
 			'a2_nombre' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Nombre'} ),
@@ -38,6 +38,6 @@ class PonentesForm( forms.ModelForm ):
 			'a3_nombre' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Nombre'} ),
 			'a3_apellido_paterno' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Apellido materno'} ),
 			'a3_apellido_materno' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Apellido paterno'} ),
-			'documento' : forms.ClearableFileInput( attrs = {'class':'form-control', 'placeholder':'Documento'} ),
+			'documento' : forms.ClearableFileInput( attrs = {'class':'form-control', 'accept':'.docx'} ),
 
 		}
