@@ -10,7 +10,22 @@ TALLERES = {
     (2,'Taller 2'),
     (3,'Taller 3'),
 }
+
+LINEAS_TEMATICAS = (
+    (1,'Análisis teórico (CCAT)'),
+    (2,'Investigación empírica en educación (CCIE)'),
+    (3,'Investigación empírica en la salud (CCIS)'),
+    (4,'Análisis teórico sobre el desarrollo de habilidades para la vida. (HVAT)'),
+    (5,'Estrategias de enseñanza y desarrollo de habilidades para la vida (IEHVE)'),
+    (6,'Habilidades socioemocionales (IEHSE)'),
+    (7,'Habilidades cognoscitivas (IEHC)'),
+    (8,'Habilidades de investigación en ciencias(IEHIC)'),
+    (9,'Habilidades de investigación en humanidades (IEHIH)'),
+    (10,'Evaluación de habilidades para la vida (IEEHV)'),
+
+)
 class asistentes(models.Model):
+    folio = models.CharField(max_length=255, blank=True, null=True)
     nombre = models.CharField(max_length=255)
     apellido_paterno = models.CharField(max_length=255)
     apellido_materno = models.CharField(max_length=255)
@@ -33,6 +48,7 @@ def content_file_name(instance, filename):
     return os.path.join('archivos/', filename)
 
 class ponentes(models.Model):
+    lineas_tematicas = models.IntegerField(choices=LINEAS_TEMATICAS, blank=True, null=True)
     titulo = models.CharField(max_length=255)   
     a1_nombre = models.CharField(max_length=255)
     a1_apellido_paterno = models.CharField(max_length=255)

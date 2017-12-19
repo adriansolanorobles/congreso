@@ -22,8 +22,9 @@ class AsistentesForm( forms.ModelForm ):
 class PonentesForm( forms.ModelForm ):
 	class Meta:
 		model = ponentes
-		fields = ['titulo','a1_nombre', 'a1_apellido_paterno', 'a1_apellido_materno', 'a1_correo_electronico', 'a1_telefono', 'a1_institucion_de_procedencia', 'a2_nombre', 'a2_apellido_paterno', 'a2_apellido_materno', 'a3_nombre', 'a3_apellido_paterno', 'a3_apellido_materno', 'documento']
+		fields = ['lineas_tematicas','titulo','a1_nombre', 'a1_apellido_paterno', 'a1_apellido_materno', 'a1_correo_electronico', 'a1_telefono', 'a1_institucion_de_procedencia', 'a2_nombre', 'a2_apellido_paterno', 'a2_apellido_materno', 'a3_nombre', 'a3_apellido_paterno', 'a3_apellido_materno', 'documento']
 		widgets = {
+			'lineas_tematicas' : forms.Select( attrs = {'class':'form-control',} ),
 			'titulo' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Título de la ponencia'} ),
 			'a1_nombre' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Nombre'} ),
 			'a1_apellido_paterno' : forms.TextInput( attrs = {'class':'form-control', 'placeholder':'Apellido materno'} ),

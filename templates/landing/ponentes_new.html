@@ -3,6 +3,91 @@
 {% load staticfiles %}
 
 {%block content%}
+
+<!-- Modal -->
+<div id="lineas-tematicas" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Líneas tematicas</h4>
+      </div>
+      <div class="modal-body">
+        		<div id="lineas-tematicas" class="about-txt-block p-bottom-10 m-bottom-30 b-bottom">
+								
+								<p>
+									El responsable de la ponencia deberá seleccionar alguna de las siguientes líneas temáticas para la presentación de su trabajo:
+								</p>
+								<ol>
+									<li style="list-style-type:none"><b>1. Ciencias Contemplativas</b></li>
+									<li style="list-style-type:none">
+										<ol style="list-style-type:square">
+											<li>
+												Análisis teórico (CCAT)
+
+											</li>
+											<li>
+												Investigación empírica en educación (CCIE)
+
+											</li>
+											<li>
+												Investigación empírica en la salud (CCIS)
+
+											</li>
+
+										</ol>
+									</li>
+									<li style="list-style-type:none"><b>2. Habilidades para la vida</b> </li>
+									<li style="list-style-type:none">
+										<ol style="list-style-type:square">
+											<li>
+												Análisis teórico sobre el desarrollo de habilidades para la vida. (HVAT)
+											</li>
+											<li>
+												Innovación en educación.
+
+											</li>
+											<li style="list-style-type:none">
+												<ol style="list-style-type:disc">
+													<li>
+														Estrategias de enseñanza y desarrollo de habilidades para la vida (IEHVE)
+													</li>
+													<li>
+														Habilidades socioemocionales (IEHSE)
+
+													</li>
+													<li>
+														Habilidades cognoscitivas (IEHC)
+
+													</li>
+													<li>
+														Habilidades de investigación en ciencias(IEHIC)
+
+													</li>
+													<li>
+														Habilidades de investigación en humanidades (IEHIH)
+
+													</li>
+													<li>
+														Evaluación de habilidades para la vida (IEEHV)
+													</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+							</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <section id="registro" class="wide-50 registro-section division">
 				<div class="container">	
 				
@@ -20,52 +105,108 @@
 
 					<form action="">
 					<div class="row">
+
 						<fieldset>
-							<div class="col-sm-6">
+							<legend>Datos sobre la ponencia</legend>
+							<div class="col-sm-12">
 	 							<div class="form-group">
 									<label for="email">Título de la ponencia:</label>
 									{{form.titulo}}
 								</div>
- 							</div>	
+ 							</div>
+
+ 							
+ 							<div class="col-sm-12">
+	 							<div class="form-group">
+									<label for="email">Líneas temáticas <a class="btn-sm btn-primary" data-toggle="modal" data-target="#lineas-tematicas">Ayuda</a>:</label>
+									{{form.lineas_tematicas}}
+								</div>
+ 							</div>
+
 						</fieldset>
  						
- 						<div class="col-sm-6">
- 							<div class="form-group">
-								<label for="pwd">Apellido  paterno:</label>
-								{{form.apellido_paterno}}
-							</div>
- 						</div>					
-						
-						<div class="col-sm-6">
- 							<div class="form-group">
-								<label for="email">Apellido materno:</label>
-								{{form.apellido_materno}}
-							</div>
- 						</div>
- 						<div class="col-sm-6">
- 							<div class="form-group">
-								<label for="pwd">Correo electrónico:</label>
-								{{form.correo_electronico}}
-							</div>
- 						</div>
-						<div class="col-sm-6">
- 							<div class="form-group">
-								<label for="pwd">Teléfono:</label>
-								{{form.telefono}}
-							</div>
- 						</div>	
-						<div class="col-sm-6">
- 							<div class="form-group">
-								<label for="pwd">Instutución de procedencia:</label>
-								{{form.institucion_de_procedencia}}
-							</div>
- 						</div>	
- 						<div class="col-sm-6">
- 							<div class="form-group">
-								<label for="pwd">Talleres disponibles:</label>
-								{{form.talleres_disponibles}}
-							</div>
- 						</div>
+ 						<fieldset>
+ 							<legend>Autor 1</legend>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Nombre:</label>
+									{{form.a1_nombre}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Apellido paterno:</label>
+									{{form.a1_apellido_paterno}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Apellido materno:</label>
+									{{form.a1_apellido_materno}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Correo electrónico:</label>
+									{{form.a1_correo_electronico}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Teléfono:</label>
+									{{form.a1_telefono}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Institución de procedencia:</label>
+									{{form.a1_institucion_de_procedencia}}
+								</div>
+ 							</div>
+ 						</fieldset>
+
+ 						<fieldset>
+ 							 <legend>Autor 2</legend>
+ 							 <div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Nombre:</label>
+									{{form.a2_nombre}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Apellido paterno:</label>
+									{{form.a2_apellido_paterno}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Apellido materno:</label>
+									{{form.a2_apellido_materno}}
+								</div>
+ 							</div>
+ 						</fieldset>
+ 						<fieldset>
+ 							 <legend>Autor 3</legend>
+ 							 <div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Nombre:</label>
+									{{form.a3_nombre}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Apellido paterno:</label>
+									{{form.a3_apellido_paterno}}
+								</div>
+ 							</div>
+ 							<div class="col-sm-6">
+	 							<div class="form-group">
+									<label for="email">Apellido materno:</label>
+									{{form.a3_apellido_materno}}
+								</div>
+ 							</div>
+ 						</fieldset>
   
   						
 						
