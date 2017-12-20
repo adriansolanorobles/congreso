@@ -6,9 +6,16 @@ import time
 # Create your models here.
 
 TALLERES = {
-    (1,'Taller 1'),
-    (2,'Taller 2'),
-    (3,'Taller 3'),
+    (1,'La Práctica de la Plena Consciencia en el Salón de Clases.'),
+    (2,'Manejo del Estrés en la Tutoría Individual y Grupal través de la Atención Plena.'),
+    (3,'Estrategias Docentes para el Desarrollo de Habilidades para la Vida.'),
+    (4,'Grupos Cooperativos para el Desarrollo de Habilidades Sociales en el Aula.'),
+    (5,'Desarrollo del Pensamiento Crítico a través de la Filosofía para Niños.'),
+    (6,'El Debate como Estrategia Didáctica para Desarrollar Habilidades Argumentativas en los Estudiantes.'),
+    (7,'Aplicación del Aprendizaje Basado en Proyectos en el Salón de Clases.'),
+    (8,'Aplicación en el Aula del Aprendizaje Basado en Problemas a través de la Historia de Casos.'),
+    (9,'El uso del Portafolio como Estrategia de Enseñanza y Evaluación.'),
+    (10,'Habilidades Contemplativas, Género y Violencia.'),
 }
 
 LINEAS_TEMATICAS = (
