@@ -49,7 +49,7 @@ def ponentes_create(request):
 			to.append(ponentes.a1_correo_electronico)
 
 			from_email = 'notificaciones@habilidadesparaadolescentes.com'
-			subject = '1er. Congreso Internacional de Psicología Contemplativa y Habilidades para la Vida'
+			subject = 'Confirmación de registro - Ponente'
 			bcc = ['seldor492@gmail.com','jorge_alfamar@hotmail.com']
 			body = get_template('landing/correo_ponentes.html').render(ctx)
 			msg = EmailMessage(subject=subject, body=body, to=to, 
@@ -78,7 +78,7 @@ def asistentes_create(request):
 			to.append(asistentes.correo_electronico)
 
 			from_email = 'notificaciones@habilidadesparaadolescentes.com'
-			subject = '1er. Congreso Internacional de Psicología Contemplativa y Habilidades para la Vida'
+			subject = 'Confirmación de registro - Asistente'
 			bcc = ['seldor492@gmail.com','jorge_alfamar@hotmail.com']
 			body = get_template('landing/correo_asistentes.html').render(ctx)
 			msg = EmailMessage(subject=subject, body=body, to=to, 
