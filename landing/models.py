@@ -64,12 +64,12 @@ class ponentes(models.Model):
     a1_correo_electronico = models.EmailField()
     a1_telefono = models.CharField(max_length=255)
     a1_institucion_de_procedencia = models.CharField(max_length=255) 
-    a2_nombre = models.CharField(max_length=255)
-    a2_apellido_paterno = models.CharField(max_length=255)
-    a2_apellido_materno = models.CharField(max_length=255)
-    a3_nombre = models.CharField(max_length=255)
-    a3_apellido_paterno = models.CharField(max_length=255)
-    a3_apellido_materno = models.CharField(max_length=255)
+    a2_nombre = models.CharField(max_length=255, blank=True, null=True)
+    a2_apellido_paterno = models.CharField(max_length=255, blank=True, null=True)
+    a2_apellido_materno = models.CharField(max_length=255, blank=True, null=True)
+    a3_nombre = models.CharField(max_length=255, blank=True, null=True)
+    a3_apellido_paterno = models.CharField(max_length=255, blank=True, null=True)
+    a3_apellido_materno = models.CharField(max_length=255, blank=True, null=True)
     documento = models.FileField(upload_to=content_file_name)
 
     class Meta:
