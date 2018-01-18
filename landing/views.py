@@ -18,6 +18,10 @@ def invitacion(request):
 
 def programa(request):
 	return render(request, 'landing/programa.html')
+
+def announcement(request):
+	return render(request, 'landing/announcement.html')
+
 def convocatoria(request):
 	return render(request, 'landing/convocatoria.html')
 
