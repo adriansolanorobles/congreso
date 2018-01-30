@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'landing',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,8 @@ EMAIL_HOST = 'mail.ntchosting.com'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = 'notificaciones@habilidadesparaadolescentes.com'
 EMAIL_HOST_PASSWORD = 'cerveza666'
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
