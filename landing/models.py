@@ -46,7 +46,7 @@ class asistentes(models.Model):
         verbose_name= 'Asistentes'
 
     def __str__(self):
-        return '{0} {1}'.format(self.nombre,self.apellido_paterno)
+        return '{0} {1} {2}'.format(self.nombre,self.apellido_paterno, self.apellido_materno)
 
 
 def content_file_name(instance, filename):
@@ -77,7 +77,7 @@ class ponentes(models.Model):
         verbose_name= 'Ponentes'
 
     def __str__(self):
-        return '{0} {1}'.format(self.nombre,self.apellido_paterno)    
+        return '{0} {1}'.format(self.a1_nombre,self.a1_apellido_paterno)    
 
 #****************************Usuario****************************************************
 class UserManager(BaseUserManager, models.Manager):

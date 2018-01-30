@@ -38,11 +38,11 @@ class UserAdmin(UA):
 
 
 class PonentesAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'lineas_tematicas', 'titulo', 'a1_nombre', 'a1_apellido_paterno', 'documento')
 
 
 class AsistentesAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'nombre', 'apellido_paterno', 'correo_electronico', 'institucion_de_procedencia', 'talleres_disponibles')
 
 admin.site.register(User, UserAdmin)
 admin.site.register(ponentes, PonentesAdmin)
