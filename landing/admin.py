@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as UA
 from .models import User
+from .models import ponentes, asistentes
 
 # Register your models here.
 
@@ -36,4 +37,13 @@ class UserAdmin(UA):
     ordering = ('email',)
 
 
+class PonentesAdmin(admin.ModelAdmin):
+    pass
+
+
+class AsistentesAdmin(admin.ModelAdmin):
+    pass
+
 admin.site.register(User, UserAdmin)
+admin.site.register(ponentes, PonentesAdmin)
+admin.site.register(asistentes, AsistentesAdmin)
