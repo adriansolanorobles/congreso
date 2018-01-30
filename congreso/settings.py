@@ -143,6 +143,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(os.getcwd(),'static') ]
 
+STATIC_ROOT = '/home/ubuntu/proyecto_congreso/temp/'
+
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(os.getcwd(),'media')
