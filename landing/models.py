@@ -122,6 +122,6 @@ class User(AbstractBaseUser, PermissionsMixin, models.Model):
     USERNAME_FIELD = 'email'
 
     def get_short_name(self):
-        return self.nombre.encode('utf8') + ' ' + self.apellido_paterno.encode('utf8') + ' ' + self.apellido_materno.encode('utf8')  
+        return self.nombre + ' ' + self.apellido_paterno  
  
 #********************************************************************************************
