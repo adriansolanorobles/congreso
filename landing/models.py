@@ -55,7 +55,7 @@ def content_file_name(instance, filename):
     return os.path.join('archivos/', filename)
 
 class ponentes(models.Model):
-    olio = models.CharField(max_length=255, blank=True, null=True)
+    folio = models.CharField(max_length=255, blank=True, null=True)
     lineas_tematicas = models.IntegerField(choices=LINEAS_TEMATICAS)
     titulo = models.CharField(max_length=255)   
     a1_nombre = models.CharField(max_length=255)
