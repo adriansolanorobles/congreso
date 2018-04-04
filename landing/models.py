@@ -16,6 +16,10 @@ TALLERES = {
     (8,'Aplicación en el Aula del Aprendizaje Basado en Problemas a través de la Historia de Casos.'),
     (9,'El uso del Portafolio como Estrategia de Enseñanza y Evaluación.'),
     (10,'Habilidades Contemplativas, Género y Violencia.'),
+    (11, 'Prevención de recaídas en adicciones con mindfulness') 
+    (12, 'Salud emocional plena con mindfulness')
+​    (13, 'Atención plena,  sabiduría organísmica y movimiento somático​')   
+
 }
 
 LINEAS_TEMATICAS = (
