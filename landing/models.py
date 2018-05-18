@@ -19,6 +19,7 @@ TALLERES = {
     (11, 'Prevención de recaídas en adicciones con mindfulness'), 
     #(12, 'Salud emocional plena con mindfulness'),
     (13, 'Atención plena,  sabiduría organísmica y movimiento somático​'), 
+    (14, 'Entrenamiento para el cultivo de la compasión de la Universidad de Stanford: La visión del Dalai Lama para el entrenamiento secular de la compasión​'), 
 
 }
 
