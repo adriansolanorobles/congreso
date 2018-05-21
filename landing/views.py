@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.core.mail import send_mail, EmailMessage
 from django.template import Context
 from django.template.loader import render_to_string, get_template
+from .models import asistentes
 
 
 from .forms import AsistentesForm, PonentesForm
@@ -68,29 +69,34 @@ def ponentes_create(request):
 	return redirect("landing:index")
 
 def asistentes_create(request):
-	
+	numero_de_personas_registradas = 0
 	form = AsistentesForm(request.POST, request.FILES)
 	if request.method == 'POST':
 		if form.is_valid():
-			asistentes = form.save()
-			asistentes.folio = '1CIPCHV-​A' + str(asistentes.id)
-			asistentes.save()	
-			ctx = {}
-			to = []
-			ctx['nombre_completo'] = asistentes.nombre + ' ' + asistentes.apellido_paterno + ' ' + asistentes.apellido_materno
-			ctx['folio'] = asistentes.folio
-			to.append(asistentes.correo_electronico)
+			asistentes_object = form.save(commit=False)
+			numero_de_personas_registradas = asistentes.objects.filter(talleres_disponibles=asistentes_object.talleres_disponibles).count()
+			if numero_de_personas_registradas <= 35:
 
-			from_email = 'notificaciones@habilidadesparaadolescentes.com'
-			subject = 'Confirmación de registro - Asistente'
-			bcc = ['seldor492@gmail.com','jorge_alfamar@hotmail.com']
-			body = get_template('landing/correo_asistentes.html').render(ctx)
-			msg = EmailMessage(subject=subject, body=body, to=to, 
-			from_email=from_email,
-			bcc = bcc
-			)
-			msg.content_subtype = 'html'
-			msg.send()	
-			return render(request, 'landing/confirmacion_asistente.html',{'nombre_completo':ctx['nombre_completo'],'folio': ctx['folio'] })	
+				asistentes_object.folio = '1CIPCHV-​A' + str(asistentes_object.id)
+				asistentes_object.save()	
+				ctx = {}
+				to = []
+				ctx['nombre_completo'] = asistentes_object.nombre + ' ' + asistentes_object.apellido_paterno + ' ' + asistentes_object.apellido_materno
+				ctx['folio'] = asistentes_object.folio
+				to.append(asistentes_object.correo_electronico)
+
+				from_email = 'notificaciones@habilidadesparaadolescentes.com'
+				subject = 'Confirmación de registro - Asistente'
+				bcc = ['seldor492@gmail.com','jorge_alfamar@hotmail.com']
+				body = get_template('landing/correo_asistentes.html').render(ctx)
+				msg = EmailMessage(subject=subject, body=body, to=to, 
+				from_email=from_email,
+				bcc = bcc
+				)
+				msg.content_subtype = 'html'
+				msg.send()	
+				return render(request, 'landing/confirmacion_asistente.html',{'nombre_completo':ctx['nombre_completo'],'folio': ctx['folio'] })
+			else:
+				return render(request, 'landing/sobrecupo_asistente.html')	
 
 	return redirect("landing:index")
