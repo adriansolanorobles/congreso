@@ -7,7 +7,7 @@ import time
 
 TALLERES = {
     (1,'La Práctica de la Plena Consciencia en el Salón de Clases.'),
-    (2,'Manejo del Estrés en la Tutoría Individual y Grupal través de la Atención Plena.'),
+    #(2,'Manejo del Estrés en la Tutoría Individual y Grupal través de la Atención Plena.'),
     #(3,'Estrategias Docentes para el Desarrollo de Habilidades para la Vida.'),
     (4,'Grupos Cooperativos para el Desarrollo de Habilidades Sociales en el Aula.'),
     (5,'Desarrollo del Pensamiento Crítico a través de la Filosofía para Niños.'),
