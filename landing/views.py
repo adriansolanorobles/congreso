@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.core.mail import send_mail, EmailMessage
 from django.template import Context
 from django.template.loader import render_to_string, get_template
-from .models import asistentes
+from .models import asistentes, TALLERES
 
 
 from .forms import AsistentesForm, PonentesForm
@@ -68,6 +68,13 @@ def ponentes_create(request):
 
 	return redirect("landing:index")
 
+def confirmacion_registro_asistentes(request, id):
+	asistentes_object = get_object_or_404(asistentes, id=id)
+	talleres = dict(sorted(list(TALLERES)))
+	taller = talleres.get(asistentes_object.talleres_disponibles)
+	return render(request, 'landing/confirmacion_registro_asistentes.html', {'asistentes_object': asistentes_object, 'taller': taller })
+
+
 def asistentes_create(request):
 	numero_de_personas_registradas = 0
 	form = AsistentesForm(request.POST, request.FILES)
@@ -76,9 +83,13 @@ def asistentes_create(request):
 			asistentes_object = form.save(commit=False)
 			numero_de_personas_registradas = asistentes.objects.filter(talleres_disponibles=asistentes_object.talleres_disponibles).count()
 			if numero_de_personas_registradas <= 35:
-
+				asistentes_object.save()
 				asistentes_object.folio = '1CIPCHV-​A' + str(asistentes_object.id)
-				asistentes_object.save()	
+				asistentes_object.save()
+				
+
+				
+					
 				ctx = {}
 				to = []
 				ctx['nombre_completo'] = asistentes_object.nombre + ' ' + asistentes_object.apellido_paterno + ' ' + asistentes_object.apellido_materno

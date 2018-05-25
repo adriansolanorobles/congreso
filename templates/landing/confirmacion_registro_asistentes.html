@@ -1,0 +1,64 @@
+{% extends 'base_confirmacion_registro.html' %}
+{% load staticfiles %}
+
+{%block content%}
+<p><b>{{asistentes_object.nombre}} {{asistentes_object.apellido_paterno}} {{asistentes_object.apellido_materno}}</b></p>
+<p><b>Folio: {{asistentes_object.folio}}</b></p>
+
+
+<img style="display: block;margin-left: auto;margin-right: auto;width:230px;height:200px;" src="http://cipchv.habilidadesparaadolescentes.com/media/asistentes/{{asistentes_object.id}}.png">
+
+<p>Esperamos que al recibir esta confirmación de registro estés muy bien.</p>
+
+<p>
+Te recordamos que el próximo <b>lunes 28 de mayo</b> inicia el <b>IV Encuentro Interinstitucional de Profesores “Desarrollo de habilidades para la vida, en el salón de clases” y el 1er Congreso Internacional de Psicología Contemplativa y Habilidades para la Vida</b> y al que te damos la bienvenida.
+</p>
+
+<p>
+El Encuentro se llevará a cabo los días <b>28, 29 y 30 de mayo</b> en la <b>Escuela Nacional Preparatoria Plantel 8 “Miguel E. Schulz” de la UNAM.
+El registro inicia a las 8:00 hrs. y la inauguración a las 9:00 hrs., ambos en el Auditorio de ENP 8.</b>
+</p>
+
+<p>
+Tu gafete y el material del Encuentro se te entregarán al registrarte.
+<p>
+
+<p>
+Para tu registro
+​​</p>
+<p>
+debes traer <b>una</b> de las siguientes opciones:
+</p>
+
+<p>
+1. <b>Impresión de esta confirmación de registro</b> (con la imagen del código de barras visible), o
+</p>
+<p>
+<b>La imagen en tu celular del código de barras de esta confirmación de registro.</b>
+</p>
+
+<p>
+<b>
+​Taller {{asistentes_object.talleres_disponibles}}: {{ taller }}
+</b>
+</p>
+
+<p>
+<b>El Plantel 8 “Miguel E. Schulz”</b>, se encuentra ubicado en Av. Lomas de Plateros s/n esq. Francisco de P. Miranda, Col. Merced Gómez, Delegación Álvaro Obregón.
+</p>
+
+<a href="https://www.google.com/maps/place/Escuela+Nacional+Preparatoria+No+8+%22Miguel+E.+Schulz%22+UNAM/@19.3670648,-99.1973228,17z/data=!3m1!4b1!4m5!3m4!1s0x85d200270225ae85:0xe08a1d01f9faf00c!8m2!3d19.3670648!4d-99.1951341" target="_blank">
+¿Cómo llegar? Haz clic aquí.
+</a> 
+<br><br>
+<a href="http://encuentro.habilidadesparaadolescentes.com/imgs/plano_enp8.jpg" target="_blank">
+Plano ENP 8. Haz clic aquí.
+</a>
+<p></p>
+
+<p> 
+
+Atentamente<br>
+La Coordinación.
+</p>
+{% endblock %}
