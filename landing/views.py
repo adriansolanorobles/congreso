@@ -74,6 +74,36 @@ def confirmacion_registro_asistentes(request, id):
 	taller = talleres.get(asistentes_object.talleres_disponibles)
 	return render(request, 'landing/confirmacion_registro_asistentes.html', {'asistentes_object': asistentes_object, 'taller': taller })
 
+def enviar_correos_asistentes(request):
+	asistentes_objects = asistentes.objects.filter(id__range=(71,100))
+	talleres = dict(sorted(list(TALLERES)))
+	enviados = []
+	for asistentes_object in asistentes_objects:
+		print(asistentes_object.folio)
+		taller = talleres.get(asistentes_object.talleres_disponibles)
+		ctx = {'asistentes_object': asistentes_object, 'taller': taller }
+		to = []
+		
+		to.append(asistentes_object.correo_electronico)
+
+		from_email = 'notificaciones@habilidadesparaadolescentes.com'
+		subject = 'Asistente - IV Encuentro Interinstitucional de Profesores - 1er Congreso Internacional de Psicología Contemplativa'
+
+		bcc = ['seldor492@gmail.com','jl.alfamar@gmail.com']
+		
+		body = get_template('landing/confirmacion_registro_asistentes.html').render(ctx)
+		
+		msg = EmailMessage(subject=subject, body=body, to=to, 
+		
+		from_email=from_email,
+		bcc = bcc
+		)
+		msg.content_subtype = 'html'
+		msg.send()
+		enviados.append(asistentes_object.correo_electronico)
+	
+	return render(request, 'landing/enviar_correos_asistentes.html', {'enviados': enviados})
+
 
 def asistentes_create(request):
 	numero_de_personas_registradas = 0

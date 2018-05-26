@@ -1,14 +1,20 @@
-{% extends 'base_confirmacion_registro.html' %}
-{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Confirmación de registro</title>
+  <meta charset="utf-8">
 
-{%block content%}
+</head>
+<body>
+
+<div>
 <p><b>{{asistentes_object.nombre}} {{asistentes_object.apellido_paterno}} {{asistentes_object.apellido_materno}}</b></p>
 <p><b>Folio: {{asistentes_object.folio}}</b></p>
 
 
 <img style="display: block;margin-left: auto;margin-right: auto;width:230px;height:200px;" src="http://cipchv.habilidadesparaadolescentes.com/media/asistentes/{{asistentes_object.id}}.png">
 
-<p>Esperamos que al recibir esta confirmación de registro estés muy bien.</p>
+<p>Esperamos que al recibir este correo estés muy bien.</p>
 
 <p>
 Te recordamos que el próximo <b>lunes 28 de mayo</b> inicia el <b>IV Encuentro Interinstitucional de Profesores “Desarrollo de habilidades para la vida, en el salón de clases” y el 1er Congreso Internacional de Psicología Contemplativa y Habilidades para la Vida</b> y al que te damos la bienvenida.
@@ -31,10 +37,10 @@ debes traer <b>una</b> de las siguientes opciones:
 </p>
 
 <p>
-1. <b>Impresión de esta confirmación de registro</b> (con la imagen del código de barras visible), o
+1. <b>Impresión de este correo</b> (con la imagen del código de barras visible), o
 </p>
 <p>
-<b>La imagen en tu celular del código de barras de esta confirmación de registro.</b>
+<b>La imagen en tu celular del código de barras de este correo.</b>
 </p>
 
 <p>
@@ -61,4 +67,9 @@ Plano ENP 8. Haz clic aquí.
 Atentamente<br>
 La Coordinación.
 </p>
-{% endblock %}
+    
+</div>
+
+</body>
+</html>
+

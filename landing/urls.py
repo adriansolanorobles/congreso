@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 
-from .views import index, convocatoria, invitacion, registro, programa, asistentes_new, asistentes_create, ponentes_new, comite_organizador, ponentes_create, announcement, confirmacion_registro_asistentes
+from .views import index, convocatoria, invitacion, registro, programa, asistentes_new, asistentes_create, ponentes_new, comite_organizador, ponentes_create, announcement, confirmacion_registro_asistentes, enviar_correos_asistentes
 
 urlpatterns = [
 	url(r'^$', index, name='index'),
@@ -15,5 +15,5 @@ urlpatterns = [
 	url(r'^registro/$', registro,name="registro"),
 	url(r'^ponentes_new/$', ponentes_new,name="ponentes_new"),
 	url(r'^confirmacion_registro_asistentes/(?P<id>\d+)/$', confirmacion_registro_asistentes,name="confirmacion_registro_asistentes"),
-
+	url(r'^enviar_correos_asistentes/$', enviar_correos_asistentes,name="enviar_correos_asistentes"),
 ]

@@ -134,8 +134,8 @@ USE_TZ = True
 
 EMAIL_HOST = 'mail.ntchosting.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'notificaciones@habilidadesparaadolescentes.com'
-EMAIL_HOST_PASSWORD = 'cerveza666'
+EMAIL_HOST_USER = 'notificaciones1@habilidadesparaadolescentes.com'
+EMAIL_HOST_PASSWORD = 'pass1234$'
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
